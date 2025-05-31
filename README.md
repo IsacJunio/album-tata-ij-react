@@ -1,54 +1,133 @@
-# React + TypeScript + Vite
+# Album-Tata-Isac
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um álbum digital desenvolvido em React com backend em Node.js e MongoDB, criado para registrar e celebrar momentos especiais do casal Tata e Isac.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Carrossel de Fotos:** Visualize todas as fotos do casal em um carrossel responsivo, adaptado para celular e desktop.
+- **Contador de Tempo Juntos:** Um contador animado mostra há quantos anos, meses e dias o casal está junto, com efeito digital e animação de flip.
+- **Menu Responsivo:** Navegação fácil entre as seções do álbum, contador e página inicial, com menu hamburguer para dispositivos móveis.
+- **Upload de Imagens:** Possibilidade de adicionar novas fotos ao álbum (backend pronto para upload e armazenamento de imagens).
+- **Design Responsivo:** Layout adaptado para diferentes tamanhos de tela, garantindo boa experiência em qualquer dispositivo.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React, TypeScript, Tailwind CSS, Vite
+- **Backend:** Node.js, Express, Multer (upload de imagens), MongoDB (armazenamento dos caminhos das imagens)
+- **Outros:** React Router, animações CSS personalizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Como rodar o projeto
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Backend
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+cd backend
+npm install
+npm run dev
 ```
+
+> O backend roda por padrão na porta 5000 e o frontend na 5173.
+
+## Estrutura de Pastas
+
+```
+├── backend
+│   └── server.js
+├── frontend
+│   ├── src
+│   │   ├── assets/images
+│   │   ├── components
+│   │   │   └── Carrossel
+│   │   └── pages/Home/sections/Contador
+│   └── public
+├── uploads
+└── README.md
+```
+
+## Como adicionar novas fotos
+
+1. Acesse a funcionalidade de upload (ou adicione manualmente na pasta `uploads`).
+2. O backend salva a imagem e registra o caminho no MongoDB.
+3. As novas fotos aparecem automaticamente no carrossel.
+
+## Créditos
+
+Projeto desenvolvido por Isac para Tata, com muito carinho e dedicação.
+
+---
+
+````<!-- filepath: /media/isac/Jogos/Projetos/Album-Novo/README.md -->
+
+# Album-Tata-Isac
+
+Este projeto é um álbum digital desenvolvido em React com backend em Node.js e MongoDB, criado para registrar e celebrar momentos especiais do casal Tata e Isac.
+
+## Funcionalidades
+
+- **Carrossel de Fotos:** Visualize todas as fotos do casal em um carrossel responsivo, adaptado para celular e desktop.
+- **Contador de Tempo Juntos:** Um contador animado mostra há quantos anos, meses e dias o casal está junto, com efeito digital e animação de flip.
+- **Menu Responsivo:** Navegação fácil entre as seções do álbum, contador e página inicial, com menu hamburguer para dispositivos móveis.
+- **Upload de Imagens:** Possibilidade de adicionar novas fotos ao álbum (backend pronto para upload e armazenamento de imagens).
+- **Design Responsivo:** Layout adaptado para diferentes tamanhos de tela, garantindo boa experiência em qualquer dispositivo.
+
+## Tecnologias Utilizadas
+
+- **Frontend:** React, TypeScript, Tailwind CSS, Vite
+- **Backend:** Node.js, Express, Multer (upload de imagens), MongoDB (armazenamento dos caminhos das imagens)
+- **Outros:** React Router, animações CSS personalizadas
+
+## Como rodar o projeto
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+````
+
+### Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+> O backend roda por padrão na porta 5000 e o frontend na 5173.
+
+## Estrutura de Pastas
+
+```
+├── backend
+│   └── server.js
+├── frontend
+│   ├── src
+│   │   ├── assets/images
+│   │   ├── components
+│   │   │   └── Carrossel
+│   │   └── pages/Home/sections/Contador
+│   └── public
+├── uploads
+└── README.md
+```
+
+## Como adicionar novas fotos
+
+1. Acesse a funcionalidade de upload (ou adicione manualmente na pasta `uploads`).
+2. O backend salva a imagem e registra o caminho no MongoDB.
+3. As novas fotos aparecem automaticamente no carrossel.
+
+## Créditos
+
+Projeto desenvolvido por Isac para Tata, com muito carinho e dedicação.
+
+---
