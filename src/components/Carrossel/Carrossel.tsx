@@ -16,7 +16,7 @@ const Carrossel = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      <div className="relative w-120 h-120 sm:w-80 sm:h-80 md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px] flex items-center justify-center">
+      <div className="relative w-full max-w-[500px] aspect-square flex items-center justify-center mx-auto">
         <img
           src={images[index]}
           alt={`slide-${index}`}

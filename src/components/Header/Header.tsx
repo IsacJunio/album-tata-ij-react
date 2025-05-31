@@ -5,7 +5,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-col md:flex-row jitems-center justify-between bg-gray-950 text-white font px-4 py-3 fixed w-full z-10">
+    <div className="flex flex-col md:flex-row items-center justify-between bg-gray-950 text-white px-4 py-3 fixed w-full z-10">
       <div className="text-xl font-bold mb-2 md:mb-0">Album-Tata-Isac</div>
 
       <button
@@ -18,11 +18,11 @@ const Header = () => {
 
       <nav
         className={`
-          flex-col gap-4 absolute top-full left-0 w-full bg-gray-950 px-4 py-4
-          md:static md:flex md:flex-row md:items-center md:gap-4 md:w-auto md:bg-transparent md:p-0
-          transition-all duration-300
-          ${menuOpen ? "flex" : "hidden"} md:flex
-        `}
+      flex-col gap-4 absolute top-full left-0 right-0 w-full bg-gray-950 px-4 py-4
+      md:static md:flex md:flex-row md:items-center md:gap-4 md:w-auto md:bg-transparent md:p-0
+      transition-all duration-300
+      ${menuOpen ? "flex" : "hidden"} md:flex
+    `}
       >
         <a
           href="#hero"
