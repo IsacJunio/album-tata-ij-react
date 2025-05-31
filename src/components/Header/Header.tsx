@@ -5,11 +5,11 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-col md:flex-row md:mr-10 jitems-center justify-between bg-gray-950 text-white font px-4 py-3 fixed w-full z-10">
+    <div className="flex flex-col md:flex-row jitems-center justify-between bg-gray-950 text-white font px-4 py-3 fixed w-full z-10">
       <div className="text-xl font-bold mb-2 md:mb-0">Album-Tata-Isac</div>
 
       <button
-        className=" md:hidden absolute right-2 top-4 z-20"
+        className=" md:hidden absolute right-2 top-4 z-20 md:mr-10"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Abrir menu"
       >
