@@ -9,7 +9,7 @@ const Header = () => {
       <div className="text-xl font-bold mb-2 md:mb-0">Album-Tata-Isac</div>
 
       <button
-        className=" md:hidden absolute right-4 top-4 z-20"
+        className=" md:hidden absolute right-2 top-4 z-20"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Abrir menu"
       >
