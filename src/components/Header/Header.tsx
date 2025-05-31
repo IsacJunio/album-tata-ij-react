@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { FaUser, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 
 const Header = () => {
